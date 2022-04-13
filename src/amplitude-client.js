@@ -1371,10 +1371,10 @@ AmplitudeClient.prototype._logEvent = function _logEvent(
     this._lastEventTime = eventTime;
     _saveCookieData(this);
 
-    const osName = this._ua.browser.name;
-    const osVersion = this._ua.browser.major;
-    const deviceModel = this._ua.device.model || this._ua.os.name;
-    const deviceVendor = this._ua.device.vendor;
+    const osName = this.options.osName;
+    const osVersion = this.options.osVersion;
+    const deviceModel = this.options.deviceModel;
+    const deviceVendor = this.options.deviceVendor;
 
     userProperties = userProperties || {};
     var trackingOptions = { ...this._apiPropertiesTrackingOptions };

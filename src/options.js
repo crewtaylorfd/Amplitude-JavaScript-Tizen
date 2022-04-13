@@ -37,6 +37,10 @@ import { version as libraryVersion } from '../package.json';
  * @property {string} [plan.version] The tracking plan version e.g. "1", "15"
  * @property {string} [plan.versionId] The tracking plan version Id e.g. "9ec23ba0-275f-468f-80d1-66b88bff9529"
  * @property {string} [platform=`Web`] -  Platform device is running on. Defaults to `Web` (browser, including mobile browsers).
+ * @property {string} [osName]
+ * @property {string} [osVersion]
+ * @property {string} [deviceModel]
+ * @property {string} [deviceVendor]
  * @property {number} [savedMaxCount=`1000`] -  Maximum number of events to save in localStorage. If more events are logged while offline, then old events are removed.
  * @property {boolean} [saveEvents=`true`] -  If `true`, saves events to localStorage and removes them upon successful upload. *Note: Without saving events, events may be lost if the user navigates to another page before the events are uploaded.*
  * @property {boolean} [saveParamsReferrerOncePerSession=`true`] -  If `true`, then includeGclid, includeFbclid, includeReferrer, and includeUtm will only track their respective properties once per session. New values that come in during the middle of the user's session will be ignored. Set to false to always capture new values.
@@ -91,6 +95,10 @@ export default {
     versionId: '',
   },
   platform: 'Web',
+  osName: '',
+  osVersion: '',
+  deviceModel: '',
+  deviceVendor: '',
   savedMaxCount: 1000,
   saveEvents: true,
   saveParamsReferrerOncePerSession: true,
